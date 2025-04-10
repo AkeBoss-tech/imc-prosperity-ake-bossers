@@ -21,7 +21,7 @@ class Trader:
             best_bid = max(order_depth.buy_orders.keys())
             best_bid_volume = order_depth.buy_orders[best_bid]
 
-            mid_price = best_ask - best_bid
+            mid_price = (best_ask + best_bid) / 2
 
             if mid_price > upper_bound:
                 print("SELL", str(best_bid_volume) + "x", best_bid)
