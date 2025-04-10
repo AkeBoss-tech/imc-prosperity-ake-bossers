@@ -1,15 +1,10 @@
 from datamodel import OrderDepth, UserId, TradingState, Order
 from typing import List
 
-class Product:
-    def __init__(self, name : str, position_limit : int):
-        self.name = name 
-        self.position_limit = position_limit
-
 class Products:
-    RAINFOREST_RESIN = Product("RAINFOREST_RESIN", 50)
-    KELP = Product("KELP", 50)
-    SQUID_INK = Product("SQUID_INK", 50)
+    RAINFOREST_RESIN = "RAINFOREST_RESIN"
+    KELP = "KELP"
+    SQUID_INK = "SQUID_INK"
 
 class Trader:
     def run(self, state: TradingState):
